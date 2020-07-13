@@ -1,0 +1,91 @@
+.App {
+	text-align: center;
+	font-family: "Blinker", sans-serif;
+}
+
+.inner-container {
+	width: 960px;
+	padding: 0px 15px;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header {
+	text-align: left;
+	padding: 20px 20px;
+	background: #464646;
+	color: white;
+	padding: 40px 0px;
+}
+
+.logo {
+	margin: 0px;
+	font-weight: 400;
+}
+.strapline {
+	text-align: left;
+	border-bottom: 1px solid #aeaeae;
+	font-size: 46px;
+	font-weight: 400;
+	margin: 0px;
+	padding: 50px 0px;
+}
+
+.products {
+	text-align: left;
+}
+
+.product {
+	padding: 60px 0px;
+	border-bottom: 1px solid #aeaeae;
+}
+.product h2 {
+	font-size: 30px;
+	font-weight: 400;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.product p {
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+
+.product .rating .rating-pip {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	padding: 0px 5px;
+}
+.product .rating .rating-pip:after {
+	content: "";
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	background-color: #c1c1c1;
+	border-radius: 50%;
+}
+
+.product .rating .rating-pip.active:after {
+	background-color: #39abf3;
+}
+
+.blue {
+	color: #39abf3;
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+}
+.rating-title {
+	display: inline-block;
+	font-size: 24px;
+	margin: 0px;
+	margin-right: 10px;
+}
