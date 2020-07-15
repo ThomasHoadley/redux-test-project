@@ -10,13 +10,13 @@ function App() {
 			<div className="App">
 				<header className="App-header">
 					<div className="inner-container">
-						<h1 class="logo">
+						<h1 className="logo">
 							Products<span className="blue">R</span>Us
 						</h1>
 					</div>
 				</header>
 				<div className="inner-container">
-					<h3 class="strapline">Products for sale</h3>
+					<h3 className="strapline">Products for sale</h3>
 					<Products />
 				</div>
 			</div>

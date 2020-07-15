@@ -7,13 +7,6 @@ class Product extends Component {
 		this.finalRating = this.finalRating.bind(this);
 	}
 
-	hoverHandler(e) {
-		let hoveredRating = e.target.getAttribute("rating");
-		if (hoveredRating !== null) {
-
-		} 
-	}
-
 	finalRating() {
 		let ratingArray = [];
 		const { rating, productID } = this.props;
@@ -21,6 +14,8 @@ class Product extends Component {
 		for (let x = 0; x < 5; x += 1) {
 			ratingArray.push(
 				<Pip
+					// NOTE
+					// trying to attach a hover handler here
 					active={`${x + 1 <= rating ? "true" : ""}`}
 					rating={`${x + 1}`}
 					productID={productID}
@@ -32,7 +27,7 @@ class Product extends Component {
 
 	render() {
 		return (
-			<div className="rating" onMouseOver={this.hoverHandler}>
+			<div className="rating">
 				<h5 className="rating-title">Rating: </h5>
 				{this.finalRating()}
 			</div>

@@ -1,6 +1,5 @@
 export const LOAD_PRODUCTS = "LOAD_PRODUCTS";
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
-export const PRODUCT_HOVERED = "PRODUCT_HOVERED";
 
 export const loadProducts = () => ({
 	type: LOAD_PRODUCTS,
@@ -40,13 +39,4 @@ export const updateProduct = (productID, rating) => ({
 			rating,
 		},
 	],
-});
-
-export const productHovered = (bool, hoveredProductID, hoveredRating) => ({
-	type: PRODUCT_HOVERED,
-	payload: {
-		bool,
-		hoveredProductID,
-		hoveredRating,
-	},
 });

@@ -3,7 +3,6 @@ import { products, hover } from "./products/reducer";
 
 const reducers = combineReducers({
 	products,
-	hover,
 });
 
 const store = createStore(reducers);

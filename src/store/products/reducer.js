@@ -1,31 +1,4 @@
-import { LOAD_PRODUCTS, UPDATE_PRODUCT, PRODUCT_HOVERED } from "./actions";
-
-export const hover = (
-	state = {
-		productHovered: {
-			hovered: false,
-			productID: 0,
-			rating: 0,
-		},
-	},
-	action
-) => {
-	switch (action.type) {
-		case PRODUCT_HOVERED:
-			const { bool, hoveredProductID, hoveredRating } = action.payload;
-			return {
-				...state,
-				productHovered: {
-					bool,
-					hoveredProductID,
-					hoveredRating,
-				},
-			};
-
-		default:
-			return state;
-	}
-};
+import { LOAD_PRODUCTS, UPDATE_PRODUCT } from "./actions";
 
 export const products = (
 	state = {
