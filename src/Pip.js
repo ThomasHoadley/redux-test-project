@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { UPDATE_PRODUCT, PRODUCT_HOVERED } from "./store/products/actions";
+import { UPDATE_PRODUCT } from "./store/products/actions";
 
 function Pip({ active, rating, productID }) {
 	const dispatch = useDispatch();

@@ -36,7 +36,7 @@ function Product({ rating, maxRating = 5, productID }) {
 			onMouseOver={handleHoverIn}
 			onMouseOut={handleHoverOut}
 		>
-			<h5 class="rating-title">Rating: </h5>
+			<h5 className="rating-title">Rating: </h5>
 			{generateRating()}
 		</div>
 	);
