@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from "redux";
-import { products, hover } from "./products/reducer";
+import { products } from "./products/reducer";
 
 const reducers = combineReducers({
 	products,
