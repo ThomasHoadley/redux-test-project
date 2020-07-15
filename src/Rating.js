@@ -1,43 +1,45 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Pip from "./Pip";
 
-class Product extends Component {
-	constructor(props) {
-		super(props);
-		this.finalRating = this.finalRating.bind(this);
-	}
+function Product({ rating, maxRating = 5, productID }) {
+	const [currentRating, setcurrentRating] = useState(rating);
 
-	hoverHandler(e) {
+	const handleHoverIn = (e) => {
 		let hoveredRating = e.target.getAttribute("rating");
+
 		if (hoveredRating !== null) {
+			setcurrentRating(hoveredRating);
+		}
+	};
 
-		} 
-	}
+	const handleHoverOut = () => {
+		setcurrentRating(rating);
+	};
 
-	finalRating() {
-		let ratingArray = [];
-		const { rating, productID } = this.props;
-
-		for (let x = 0; x < 5; x += 1) {
-			ratingArray.push(
+	const generateRating = () => {
+		let finalRating = [];
+		for (let x = 0; x < maxRating; x += 1) {
+			finalRating.push(
 				<Pip
-					active={`${x + 1 <= rating ? "true" : ""}`}
+					active={`${x + 1 <= currentRating ? "true" : ""}`}
 					rating={`${x + 1}`}
 					productID={productID}
 				/>
 			);
 		}
-		return ratingArray;
-	}
+		return finalRating;
+	};
 
-	render() {
-		return (
-			<div className="rating" onMouseOver={this.hoverHandler}>
-				<h5 className="rating-title">Rating: </h5>
-				{this.finalRating()}
-			</div>
-		);
-	}
+	return (
+		<div
+			className="rating"
+			onMouseOver={handleHoverIn}
+			onMouseOut={handleHoverOut}
+		>
+			<h5 class="rating-title">Rating: </h5>
+			{generateRating()}
+		</div>
+	);
 }
 
 export default Product;
